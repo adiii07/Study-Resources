@@ -1,0 +1,108 @@
+{%extends "layout.html"%}
+{%block content%}
+
+<!-- Form to upload files -->
+<p class="para-left">
+    Upload your study material
+</p>
+<div class="upload-form">
+    <form method="POST" action="/" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Upload Your Files!</legend>
+            <div class="form-group">
+                {{ form.file_name.label(class="form-control-label") }}
+
+                {% if form.file_name.errors %}
+                    {{ form.file_name(class="form-control form-control-lg is-invalid") }}
+                    <div class='invalid-feedback'>
+                        {% for error in form.file_name.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.file_name(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <input type='file' name='file'>
+                
+            <div class="form-group">
+                {{ form.grade.label(class="form-control-label") }}
+                {% if form.grade.errors %}
+                    {{ form.grade(class="form-control form-control-lg is-invalid") }}
+                    <div class='invalid-feedback'>
+                        {% for error in form.grade.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.grade(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.subject.label(class="form-control-label") }}
+                {% if form.subject.errors %}
+                    {{ form.subject(class="form-control form-control-lg is-invalid") }}
+                    <div class='invalid-feedback'>
+                        {% for error in form.subject.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.subject(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+    </form>
+</div>
+
+<!-- Form to download files -->
+<p class="para-right">
+   Enter grade and and subject to get files
+</p>
+<div class="download-form">
+    <form method="POST" action="">
+        {{ download_form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Get your Study Resources Here!</legend>
+            <div class="form-group">
+                {{ download_form.grade.label(class="form-control-label") }}
+
+                {% if download_form.grade.errors %}
+                    {{ download_form.grade(class="form-control form-control-lg is-invalid") }}
+                    <div class='invalid-feedback'>
+                        {% for error in download_form.grade.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ download_form.grade(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ download_form.subject.label(class="form-control-label") }}
+
+                {% if download_form.subject.errors %}
+                    {{ download_form.subject(class="form-control form-control-lg is-invalid") }}
+                    <div class='invalid-feedback'>
+                        {% for error in download_form.subject.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ download_form.subject(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ download_form.submit(class="btn btn-outline-info") }}
+        </div>
+    </form>
+</div>
+{%endblock%}

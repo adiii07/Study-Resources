@@ -1,0 +1,102 @@
+
+ header {
+  background-color: rgb(41, 41, 41);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: hidden;
+ }
+
+  .topnav-left a, .topnav-right a {
+    color: #8479e0;
+    text-align: center;
+    text-decoration:none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+  }
+
+  .topnav-left a, .topnav-right a {
+    padding: 25px 25px 25px 25px; 
+  }
+
+  .topnav-left a:hover, .topnav-right a:hover {
+    background-color: #ddd;
+    color: #322980;
+  }
+
+  .topnav-left {
+    float: left;
+  }
+  .topnav-right{
+    float: right;
+  }
+
+  body {
+    background: #f0d5ff;
+  }
+
+  .upload-form {
+    padding-top: 5%;
+    padding-right: 5%;
+    margin-left: 50%;
+    border-bottom: #000000;
+    border-style: none;
+  }
+
+  .download-form {
+    padding-top: 10%;
+    padding-left: 5%;
+    padding: 10% 0% 10% 5%;
+    margin-right: 50%;
+  }
+
+.para-left{
+  padding-top: 15%;
+  padding-left: 10%;
+  float: left;
+  font-size: 150%;
+}
+
+.para-right{
+  padding-top: 20%;
+  padding-right: 10%;
+  float: right;
+  font-size: 150%;
+}
+
+table, th, td {
+  border: 2px solid black;
+  text-align: center;
+}
+
+table {
+  width: 90%;
+}
+
+.downloads {
+  padding: 3% 10% 20% 5%;
+}
+
+.download_heading {
+  padding-top: 2%;
+  padding-left: 3%;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #d5bde2;
+}
+
+input {
+  padding-bottom: 15px;
+}
+
+.about_head {
+  font-weight: 500;
+  padding: 3% 0% 1% 3%;
+}
+
+.about {
+  font-size: large;
+  padding: 0% 15% 0% 3%;
+}
+
