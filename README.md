@@ -6,3 +6,6 @@ Students can upload their study material and access files uploaded by others wit
 To run the website, all the libraries in requirements.txt must be installed in your computer.
 Navigate to the folder with run.py file, and run "python run.py" in the terminal and go to http://127.0.0.1:5000/ or http://localhost:5000/ on a browser 
 to view the website.
+
+****Visit https://freestudyresources.herokuapp.com/ to access website****
+Currently files are uploaded only for grade 9 and 10 Mathematics.
